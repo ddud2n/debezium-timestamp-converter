@@ -1,4 +1,4 @@
-package oryanmoshe.kafka.connect.util;
+package mustit.sjlee.kafka.connect.util;
 
 import io.debezium.spi.converter.CustomConverter;
 import io.debezium.spi.converter.RelationalColumn;
@@ -45,7 +45,10 @@ public class TimestampConverter implements CustomConverter<SchemaBuilder, Relati
       registration.register(SchemaBuilder.int64().optional(), rawValue -> {
         try {
           if (rawValue == null) return null;
-          if (rawValue instanceof Long) {if((long)rawValue == 0) return null; else return (long) rawValue;}
+          if (rawValue instanceof Long) {
+            if ((long) rawValue == 0) return null;
+            else return (long) rawValue;
+          }
           if (rawValue instanceof String) return (long) StringToTime((String) rawValue, sqlType);
           switch (sqlType) {
             case "date":

@@ -1,4 +1,4 @@
-package oryanmoshe.kafka.connect.util;
+package mustit.sjlee.kafka.connect.util;
 
 import org.apache.kafka.connect.data.SchemaBuilder;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -8,10 +8,7 @@ import io.debezium.spi.converter.RelationalColumn;
 import io.debezium.spi.converter.CustomConverter.Converter;
 import io.debezium.spi.converter.CustomConverter.ConverterRegistration;
 
-import java.time.LocalDateTime;
 import java.util.OptionalInt;
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
